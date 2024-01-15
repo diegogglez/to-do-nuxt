@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-red-500">
-    Todo List
+  <div>
+    <NuxtLayout>
+      <NuxtPage/>
+    </NuxtLayout>
   </div>
 </template>
