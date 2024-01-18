@@ -8,10 +8,10 @@
 
   const removeList = (id) => {
     console.log(id)
-    // const index = initialData.value.findIndex(item => item._id === id.id);
-    // console.log(index)
-    // initialData.value.shift()
-    // console.log(initialData.value)
+    const index = initialData.value.findIndex(item => item._id === id.id);
+    console.log(index)
+    initialData.value.shift()
+    console.log(initialData.value)
   };
 </script>
 

@@ -15,12 +15,18 @@
       id: deleted[0]._id
     })
   };
+
+  onMounted(() => {
+    console.log(`the component is now mounted.`)
+    const titleInput = document.getElementById('input');
+    titleInput.focus()
+  });
 </script>
 
 <template>
   <div :class=styles>
     <div class="flex justify-between items-center">
-      <input class="text-black font-semibold" :value="data.name">
+      <input class="text-black font-semibold" :value="data.name" id="input">
       <button class="hover:bg-slate-500 p-2 rounded">
         <IconsDeleteList @click="deleteList"/>
       </button>
