@@ -16,17 +16,25 @@
     })
   };
 
-  onMounted(() => {
-    console.log(`the component is now mounted.`)
-    const titleInput = document.getElementById('input');
-    titleInput.focus()
-  });
+  const updateList = async () => {
+    await $fetch('/api/updateList', {
+      method: 'PUT',
+      body: {
+        id: data._id,
+        newTitle: data.name
+      }
+    })
+  };
 </script>
 
 <template>
   <div :class=styles>
     <div class="flex justify-between items-center">
-      <input class="text-black font-semibold" :value="data.name" id="input">
+      <input 
+        id="title"
+        class="text-black font-semibold" 
+        v-model="data.name"
+        @change="updateList">
       <button class="hover:bg-slate-500 p-2 rounded">
         <IconsDeleteList @click="deleteList"/>
       </button>

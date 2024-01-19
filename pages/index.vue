@@ -24,5 +24,6 @@
       <IconsAdd/>
       Add List
     </button>
+    <!-- <List v-bind:data="[]"/> -->
   </div>
 </template>
